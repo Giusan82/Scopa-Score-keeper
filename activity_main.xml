@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.example.android.scopascorekeeper.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundApp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--First Player -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="@string/nameP1"
+                    android:textColor="@color/textApp"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/P1_NumWin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/textApp"
+                        android:textSize="56sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deal_score" />
+
+                    <TextView
+                        android:id="@+id/P1_Deal_score"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:textColor="@color/textApp"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:text="@string/scoring"
+                        android:textColor="@color/textApp"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <View style="@style/horizontalBar"></View>
+
+
+                    <!-- Cards -->
+                    <LinearLayout style="@style/scoringColumn">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center"
+                            android:text="@string/numberCard"
+                            android:textColor="@color/textApp"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/cardsP1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:gravity="end"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="@color/textApp"
+                            android:textColorHint="@color/textApp" />
+
+
+                    </LinearLayout>
+
+
+                    <!-- Coins -->
+                    <LinearLayout style="@style/scoringColumn">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center"
+                            android:text="@string/numberCoins"
+                            android:textColor="@color/textApp"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/coinsP1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:gravity="end"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="@color/textApp"
+                            android:textColorHint="@color/textApp" />
+
+
+                    </LinearLayout>
+
+                    <!-- Scopa -->
+                    <LinearLayout style="@style/scoringColumn">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center"
+                            android:text="@string/scopa"
+                            android:textColor="@color/textApp"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/scopaP1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:gravity="end"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="@color/textApp"
+                            android:textColorHint="@color/textApp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Prime -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/prime"
+                    android:textColor="@color/textApp"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View style="@style/horizontalBar"></View>
+
+                <LinearLayout style="@style/prime_group">
+
+                    <ImageView
+                        style="@style/prime_simbols"
+                        android:src="@drawable/tiles" />
+
+                    <Spinner
+                        android:id="@+id/prime_tilesP1"
+                        style="@style/prime_spinner"
+                        android:entries="@array/spinner_array"></Spinner>
+                </LinearLayout>
+
+                <View style="@style/horizontalBar"></View>
+
+                <LinearLayout style="@style/prime_group">
+
+                    <ImageView
+                        style="@style/prime_simbols"
+                        android:src="@drawable/hearts" />
+
+                    <Spinner
+                        android:id="@+id/prime_heartsP1"
+                        style="@style/prime_spinner"
+                        android:entries="@array/spinner_array"></Spinner>
+                </LinearLayout>
+
+                <View style="@style/horizontalBar"></View>
+
+                <LinearLayout style="@style/prime_group">
+
+                    <ImageView
+                        style="@style/prime_simbols"
+                        android:src="@drawable/pikes" />
+
+                    <Spinner
+                        android:id="@+id/prime_pikesP1"
+                        style="@style/prime_spinner"
+                        android:entries="@array/spinner_array"></Spinner>
+                </LinearLayout>
+
+                <View style="@style/horizontalBar"></View>
+
+                <LinearLayout style="@style/prime_group">
+
+                    <ImageView
+                        style="@style/prime_simbols"
+                        android:src="@drawable/clovers" />
+
+                    <Spinner
+                        android:id="@+id/prime_cloversP1"
+                        style="@style/prime_spinner"
+                        android:entries="@array/spinner_array"></Spinner>
+                </LinearLayout>
+
+                <View style="@style/horizontalBar"></View>
+
+                <!-- End Prime -->
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary">
+
+            </View>
+            <!-- End First Player -->
+
+            <!-- Second Player -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="@string/nameP2"
+                    android:textColor="@color/textApp"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/P2_NumWin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/textApp"
+                        android:textSize="56sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deal_score" />
+
+                    <TextView
+                        android:id="@+id/P2_Deal_score"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:textColor="@color/textApp"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:text="@string/scoring"
+                        android:textColor="@color/textApp"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <View style="@style/horizontalBar"></View>
+
+
+                    <!-- Cards -->
+                    <LinearLayout style="@style/scoringColumn">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center"
+                            android:text="@string/numberCard"
+                            android:textColor="@color/textApp"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/cardsP2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:gravity="end"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="@color/textApp"
+                            android:textColorHint="@color/textApp" />
+
+
+                    </LinearLayout>
+
+
+                    <!-- Coins -->
+                    <LinearLayout style="@style/scoringColumn">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center"
+                            android:text="@string/numberCoins"
+                            android:textColor="@color/textApp"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/coinsP2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:gravity="end"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="@color/textApp"
+                            android:textColorHint="@color/textApp" />
+
+
+                    </LinearLayout>
+
+                    <!-- Scopa -->
+                    <LinearLayout style="@style/scoringColumn">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center"
+                            android:text="@string/scopa"
+                            android:textColor="@color/textApp"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/scopaP2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:gravity="end"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="@color/textApp"
+                            android:textColorHint="@color/textApp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Prime -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/prime"
+                    android:textColor="@color/textApp"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View style="@style/horizontalBar"></View>
+
+                <LinearLayout style="@style/prime_group">
+
+                    <ImageView
+                        style="@style/prime_simbols"
+                        android:src="@drawable/tiles" />
+
+                    <Spinner
+                        android:id="@+id/prime_tilesP2"
+                        style="@style/prime_spinner"
+                        android:entries="@array/spinner_array"></Spinner>
+                </LinearLayout>
+
+                <View style="@style/horizontalBar"></View>
+
+                <LinearLayout style="@style/prime_group">
+
+                    <ImageView
+                        style="@style/prime_simbols"
+                        android:src="@drawable/hearts" />
+
+                    <Spinner
+                        android:id="@+id/prime_heartsP2"
+                        style="@style/prime_spinner"
+                        android:entries="@array/spinner_array"></Spinner>
+                </LinearLayout>
+
+                <View style="@style/horizontalBar"></View>
+
+                <LinearLayout style="@style/prime_group">
+
+                    <ImageView
+                        style="@style/prime_simbols"
+                        android:src="@drawable/pikes" />
+
+                    <Spinner
+                        android:id="@+id/prime_pikesP2"
+                        style="@style/prime_spinner"
+                        android:entries="@array/spinner_array"></Spinner>
+                </LinearLayout>
+
+                <View style="@style/horizontalBar"></View>
+
+                <LinearLayout style="@style/prime_group">
+
+                    <ImageView
+                        style="@style/prime_simbols"
+                        android:src="@drawable/clovers" />
+
+                    <Spinner
+                        android:id="@+id/prime_cloversP2"
+                        style="@style/prime_spinner"
+                        android:entries="@array/spinner_array"></Spinner>
+                </LinearLayout>
+
+                <View style="@style/horizontalBar"></View>
+                <!-- End Second Player -->
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/sette_belloP1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/backgroundApp"
+                android:button="@null"
+                android:checked="false"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:paddingRight="24dp"
+                android:text="@string/sette_bello"
+                android:textAlignment="textEnd"
+                android:textColor="@color/textApp"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/sette_belloP2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/backgroundApp"
+                android:button="@null"
+                android:drawableLeft="@android:drawable/btn_radio"
+                android:paddingLeft="24dp"
+                android:text="@string/sette_bello"
+                android:textColor="@color/textApp"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+
+        <Button
+            style="@style/buttons"
+            android:layout_marginBottom="8dp"
+            android:onClick="count"
+            android:text="@string/count" />
+
+
+        <Button
+            style="@style/buttons"
+            android:layout_marginBottom="8dp"
+            android:onClick="numberWin"
+            android:text="@string/next_deal" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/buttons"
+            android:onClick="resetScore"
+            android:text="@string/reset" />
+
+    </LinearLayout>
+</ScrollView>
