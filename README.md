@@ -1,7 +1,8 @@
 Here there is an app that I made for the second project "Court Counter App" of the course "Android for Beginners".
 
 
-So I decide some of unique that was not already published on udacity forum. I was inspirated at the famous italian cards game, named "Scopa".
+I decide build some unique app that was not already published on udacity forum. 
+I was inspirated at the famous italian cards game, named "Scopa".
 
 Here you can find more detail about this game:
 https://en.wikipedia.org/wiki/Scopa
@@ -20,7 +21,7 @@ In addition it has a lot of functions. As scrolling due to high number of functi
   <img src="Screenshot_2017-04-11-03-11-19.png" width="250"/>
 </p>
 
-The radiobutton that allow of choosing only one option, because the card "Sette Bello" is unique and only one player can have it and provides a complete system able to check error of inputs, showed as toast popup messages:
+The radiobutton that allow of choosing only one option, because the card "Sette Bello" is unique and only one player can have it and the app provides a complete system able to check error of inputs, showed as toast popup messages:
 
 <p align="center">
   <img src="Screenshot_2017-04-11-03-11-44.png" width="250"/>
