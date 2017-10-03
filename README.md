@@ -8,6 +8,10 @@ https://en.wikipedia.org/wiki/Scopa
 
 I have used the french symbols, because are easier to find card with it.
 
+This app is complete and works without any error. It has the icon in action bar and launcher as my previous app posted before:
+
+In addition it has a lot of functions. As scrolling due to high number of functions, inputs as EditText, where you can add directly the number from the keyboard before of calculating the score of the deal. Then it have several spinner with a drop menu, where it is possible easly choose the right card that you need.
+
 <p align="center">
   <img src="Screenshot_2017-04-11-03-10-33.png" width="250"/>
   <img src="Screenshot_2017-04-11-03-11-00.png" width="250"/>
