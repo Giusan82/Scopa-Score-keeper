@@ -13,7 +13,15 @@ This app is complete and works without any error. Here some screenshot:
   <img src="Screenshot_2017-04-11-03-10-33.png" width="250"/>
   <img src="Screenshot_2017-04-11-03-11-00.png" width="250"/>
 </p>
+
 In addition it has a lot of functions. As scrolling due to high number of functions, inputs as EditText, where you can add directly the number from the keyboard before of calculating the score of the deal. Then it have several spinner with a drop menu, where it is possible easly choose the right card that you need.
+
+<p align="center">
+  <img src="Screenshot_2017-04-11-03-11-19.png" width="250"/>
+</p>
+
+The radiobutton that allow of choosing only one option, because the card "Sette Bello" is unique and only one player can have it. It have therefore a complete system able to check error of inputs, showed as toast popup messages:
+
 <p align="center">
   <img src="Screenshot_2017-04-11-03-11-19.png" width="250"/>
   <img src="Screenshot_2017-04-11-03-11-44.png" width="250"/>
@@ -24,5 +32,4 @@ In addition it has a lot of functions. As scrolling due to high number of functi
   <img src="Screenshot_2017-04-11-03-14-50.png" width="250"/>
   <img src="2017-04-09_184505.png" width="250"/>
 </p>
-
 https://discussions.udacity.com/t/scopa-score-keeper-app-with-message-popup-spinner-radiobutton-and-edittext/238218
